@@ -56,7 +56,7 @@ const double composite_redouble_integration(const double &range_a, const double 
             double mini_integration = integration(function, mini_a, mini_b);
             res += mini_integration;
         }
-    } while (epsilon < abs(res_old - res) && max_times > times);
+    } while (epsilon <= abs(res_old - res) && max_times > times);
     cout << "redouble_times: " << times << endl;
     return res;
 }
